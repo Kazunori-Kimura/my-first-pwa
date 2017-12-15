@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   // install ServiceWorker
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("./service-worker.js")
+      .register("service-worker.js")
       .then(() => {
         console.log("[app] Service Worker Registered.");
       });
