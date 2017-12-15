@@ -75,17 +75,6 @@ function getWeather() {
     return;
   }
 
-  if ("caches" in window) {
-    caches.match(url).then((response) => {
-      if (response) {
-        response.json().then((json) => {
-          updateWeatherView(json);
-          hideLoader();
-        });
-      }
-    });
-  }
-
   showLoader();
   fetch(url)
     .then((response) => {

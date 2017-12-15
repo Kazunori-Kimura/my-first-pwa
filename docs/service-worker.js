@@ -68,6 +68,14 @@ self.addEventListener("fetch", (evt) => {
             .then((response) => {
               cache.put(evt.request.url, response.clone());
               return response;
+            })
+            .catch((err) => {
+              logging(`Error! - ${err.message}`);
+              
+              return cache.match(evt.request.url)
+                .then((response) => {
+                  return response;
+                });
             });
         })
     );
