@@ -60,7 +60,7 @@ function getApiUrl() {
   const json = getApiKey();
   if (json && json.apiKey && json.cityId) {
     // openweathermap.org
-    return `http://api.openweathermap.org/data/2.5/weather?id=${json.cityId}&APPID=${json.apiKey}`;
+    return `https://api.openweathermap.org/data/2.5/weather?id=${json.cityId}&APPID=${json.apiKey}`;
   } else {
     return "";
   }

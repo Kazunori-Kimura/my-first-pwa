@@ -1,7 +1,7 @@
 // service-worker.js
 const CACHE_NAME = "my-first-pwa";
 const DATA_CACHE_NAME = "my-first-pwa-data";
-const API_URL = "http://api.openweathermap.org/data";
+const API_URL = "https://api.openweathermap.org/data";
 const filesToCaches = [
   "./",
   "./app.js",
